@@ -1,0 +1,57 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    span {
+      font-size: 1rem;
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      padding: 3px 7px;
+
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: main.$color-gray-100;
+        border-radius: 4px;
+
+        color: main.$color-black-900;
+      }
+      &.active {
+        background-color: main.$color-gray-100;
+        border-radius: 4px;
+        color: main.$color-black-900;
+      }
+      &.inactive {
+        background-color: main.$color-white-000;
+        border-radius: 4px;
+
+        color: main.$color-black-900;
+      }
+      &__number {
+        &.active {
+          color: red;
+        }
+      }
+    }
+  }
+}
