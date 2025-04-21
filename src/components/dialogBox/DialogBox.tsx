@@ -24,6 +24,7 @@ const DialogBox = ({ data, handleDialog }: Props) => {
             //getLocalStorage는 있는데 id가 포함되어 있거나
             if (getLocalStorage.findIndex((storage: CardDTO) => storage.id === selected.id) > -1) return
             else {
+
                 const lists = [...getLocalStorage, selected]
                 localStorage.setItem("favorites", JSON.stringify(lists))
                 setSelected(true)

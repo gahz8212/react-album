@@ -8,6 +8,11 @@ const CommonHeader = () => {
             navigate('/bookmark')
         }
     }
+    const onClick_CSS = () => {
+        if (location.pathname === '/css') { navigate('/') } else {
+            navigate('/css')
+        }
+    }
     return (
         <div className={styles.header}>
             <div className={styles.header__logoBox}>
@@ -19,6 +24,9 @@ const CommonHeader = () => {
                 <button className={styles.header__profileBox__button}>사진제출</button>
                 <button className={styles.header__profileBox__button} onClick={onClick}>
                     {location.pathname === '/bookmark' ? '뒤로' : '북마크'}
+                </button>
+                <button className={styles.header__profileBox__button} onClick={onClick_CSS}>
+                    {location.pathname === '/css' ? '뒤로' : 'CSS'}
                 </button>
                 <div className={styles.header__profileBox__userName}>berserk.gahz</div>
             </div>

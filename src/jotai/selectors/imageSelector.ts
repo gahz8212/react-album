@@ -4,7 +4,7 @@ import { searchState } from "../atoms/searchState";
 import axios from "axios";
 export const imagesData = atom(async get => {
   const API_URL = "https://api.unsplash.com/search/photos";
-  const API_KEY = "";
+  const API_KEY = "wN-S4MefyNmjxXhztCh66hmzmLPxZjNd-eVRZ_nqPKk";
   const PER_PAGE = 30;
   const searchValue = get(searchState);
   const pageValue = get(pageState);

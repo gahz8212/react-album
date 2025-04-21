@@ -15,7 +15,7 @@ const Album = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [imgData, setImgData] = useState<CardDTO>()
     const datas = useAtomValue(loadable(imagesData))
-    // console.log('datas', datas)
+
     const results = useMemo(() => {
 
         if (datas.state === 'hasData') {
@@ -31,6 +31,7 @@ const Album = () => {
 
     return (
         <div className={styles.page}>
+
             {/* 공통 헤더 UI 부분 */}
             <Header />
             {/* 공통 네비게이션션 UI 부분 */}
@@ -53,7 +54,7 @@ const Album = () => {
             </div>
             {/* {공통 푸터 UI 부분} */}
             <CommonFooter />
-            {open && <DialogBox data={imgData} handleDialog={setOpen} />}
+            {open && imgData && <DialogBox data={imgData} handleDialog={setOpen} />}
         </div >
     );
 };
